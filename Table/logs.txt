@@ -1,0 +1,13 @@
+user id date
+user id date
+user id date
+user id date
+user id date
+user id date
+user id date
+April 4, 2018, 3:54 pm - dump database avec succès
+-------------------------
+April 4, 2018, 3:54 pm - Database imported successfully
+-------------------------
+April 4, 2018, 3:57 pm - New records created successfully
+-------------------------
