@@ -6,20 +6,20 @@ date_default_timezone_set('Europe/Paris'); // Timezone Paris
 $date = (new DateTime('NOW'))->format("D, d F Y, H:i:s");
 
 // Créer une connexion
-$conn1 = new mysqli('172.16.44.1', "root", "ePia6cH3mb", "SL_TRACKING_SEARCH");
+$conn1 = new mysqli('localhost', "root", "", "sl_tracking_search");
 $conn2 = new mysqli('localhost', "root", "", "test");
 // Vérifiez la connexion
-if (!$conn1->connect_errno) {
-    echo 'toto';
-    $msg = "Connection failed: " . $conn1->connect_error;
+if ($conn1->connect_errno) {
+    
+    $msg = "Connection failed to extranet : " . $conn1->connect_error;
     $log  = $date . ' - ' .$msg.PHP_EOL.
         "-------------------------".PHP_EOL;
     //Save string to log, use FILE_APPEND to append.
     file_put_contents('./logs.txt', $log, FILE_APPEND);
     exit;
 } 
-if (!$conn2->connect_errno) {
-    $msg = "Connection failed: " . $conn2->connect_error;
+if ($conn2->connect_errno) {
+    $msg = "Connection failed localhost : " . $conn2->connect_error;
     $log  = $date . ' - ' .$msg.PHP_EOL.
         "-------------------------".PHP_EOL;
     //Save string to log, use FILE_APPEND to append.
@@ -206,14 +206,14 @@ if($city) {
         "-------------------------".PHP_EOL;
     file_put_contents('./logs.txt', $logSoins, FILE_APPEND);
 }
-//unlink('./storeLocator-April-18-2018-.sql');
+
 // Si stauts est TRUE on dump la bdd
 if($status) {
-    //require('dumpStoreLocator.php');
+    require('dumpStoreLocator.php');
 } else {
     $msgSoins = "Une error se produit avant le damping de la bdd";
-        $logSoins  = $date . ' - ' .$msgSoins.PHP_EOL.
+    $logSoins  = $date . ' - ' .$msgSoins.PHP_EOL.
         "-------------------------".PHP_EOL;
-        file_put_contents('./logs.txt', $logSoins, FILE_APPEND);
-        return false;
+    file_put_contents('./logs.txt', $logSoins, FILE_APPEND);
+    return false;
 }

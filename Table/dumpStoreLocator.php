@@ -9,8 +9,9 @@ try {
 		'db_name' => 'sl_tracking_search',
 		'include_tables' => array('lpg_all_customer', 'lpg_all_facebook', 'lpg_all_facebook_horaires', 'lpg_all_facebook_img'), // only include those tables
 	));
+	$ftp = 'storeLocator-' . date("F-j-Y-s");
+	$storeLocator_dumper->dump('bkp/' . $ftp . '.sql');
 	
-	$storeLocator_dumper->dump('bkp/storeLocator-' . date("F-j-Y") . '.sql');
 	$msg = 'dump database avec succès';
 
 	

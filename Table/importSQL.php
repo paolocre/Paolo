@@ -4,9 +4,9 @@
 ini_set('memory_limit','-1'); 
 // Décommentez cette ligne ci-dessous pour une base de données plus grande pour permettre au script de s'exécuter longtemps
 set_time_limit(0);
-
+//echo $ftp;
 // database file path
-$filename = 'storeLocator.sql';
+$filename = $ftp.'.sql';
 // MySQL host
 $mysql_host = 'localhost';
 // MySQL username
@@ -35,7 +35,7 @@ if (mysqli_connect_errno()) {
 $templine = '';
 
 // Read in entire file
-$fp = fopen($filename, 'r');
+$fp = fopen('bkp/' . $filename, 'r');
 
 // Loop through each line
 while (($line = fgets($fp)) !== false) {

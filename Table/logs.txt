@@ -1,4 +1,226 @@
-Thu, 19 April 2018, 18:16:02 - Connection failed: 
+Fri, 20 April 2018, 14:57:37 - Connection failed: 
 -------------------------
-Fri, 20 April 2018, 10:59:02 - Connection failed: 
+Fri, 20 April 2018, 14:58:02 - Connection failed to extranet : 
+-------------------------
+Fri, 20 April 2018, 14:58:22 - Connection failed localhost : 
+-------------------------
+Fri, 20 April 2018, 14:58:42 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 14:58:42 - La requête de la recherche par code postale est correcte  : code postale ( 75008 )
+-------------------------
+Fri, 20 April 2018, 14:58:42 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 14:58:42 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 2:58 pm - dump database avec succès
+-------------------------
+April 20, 2018, 2:58 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:01:31 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:01:31 - La requête de la recherche par code postale est correcte  : code postale ( 75008 )
+-------------------------
+Fri, 20 April 2018, 15:01:31 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:01:31 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:01 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:01 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:02:35 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:02:35 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Fri, 20 April 2018, 15:02:35 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:02:35 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:02 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:02 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:08:50 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 15:08:50 - La requête de la recherche par code postale est correcte  : code postale ( 75008 )
+-------------------------
+Fri, 20 April 2018, 15:08:50 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:08:50 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:08 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:08 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:10:10 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Fri, 20 April 2018, 15:10:10 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Fri, 20 April 2018, 15:10:10 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:10:10 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:10 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:10 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:10:24 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:10:24 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Fri, 20 April 2018, 15:10:24 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:10:24 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:10 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:10 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:11:02 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Fri, 20 April 2018, 15:11:02 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:11:02 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:11:02 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:11 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:11 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:11:40 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 15:11:40 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:11:40 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:11:40 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:11 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:11 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:12:02 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Fri, 20 April 2018, 15:12:02 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Fri, 20 April 2018, 15:12:02 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:12:02 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:12 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:12 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:13:07 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Fri, 20 April 2018, 15:13:07 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Fri, 20 April 2018, 15:13:07 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:13:07 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:13 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:13 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:14:53 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 15:14:53 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:14:53 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:14:53 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:14 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:15 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:15:30 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:15:30 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:15:30 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:15:30 - La recherche Soins Visage est correcte
+-------------------------
+Fri, 20 April 2018, 15:15:55 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Fri, 20 April 2018, 15:15:55 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Fri, 20 April 2018, 15:15:55 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:15:55 - La recherche Soins Visage est correcte
+-------------------------
+Fri, 20 April 2018, 15:16:06 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 15:16:06 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Fri, 20 April 2018, 15:16:06 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:16:06 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:16 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:16 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:16:56 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:16:56 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:16:56 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:16:56 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:17 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:17 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:17:38 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:17:38 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Fri, 20 April 2018, 15:17:38 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:17:38 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:17 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:17 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:18:24 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Fri, 20 April 2018, 15:18:24 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Fri, 20 April 2018, 15:18:24 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:18:24 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:18 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:18 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:19:25 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Fri, 20 April 2018, 15:19:25 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Fri, 20 April 2018, 15:19:25 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:19:25 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:19 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:19 pm - Database imported successfully
+-------------------------
+Fri, 20 April 2018, 15:20:05 - La requête de la recherche par ville est correcte  : Ville ( Paris )
+-------------------------
+Fri, 20 April 2018, 15:20:05 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Fri, 20 April 2018, 15:20:05 - La requête de la recherche par liste des appareils est correcte
+-------------------------
+Fri, 20 April 2018, 15:20:05 - La recherche Soins Visage est correcte
+-------------------------
+April 20, 2018, 3:20 pm - dump database avec succès
+-------------------------
+April 20, 2018, 3:20 pm - Database imported successfully
 -------------------------
