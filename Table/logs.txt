@@ -224,3 +224,29 @@ April 20, 2018, 3:20 pm - dump database avec succès
 -------------------------
 April 20, 2018, 3:20 pm - Database imported successfully
 -------------------------
+Sat, 21 April 2018, 11:52:00 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Sat, 21 April 2018, 11:52:25 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Sat, 21 April 2018, 11:52:41 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Sat, 21 April 2018, 11:52:52 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Sat, 21 April 2018, 11:54:12 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Sat, 21 April 2018, 11:54:12 - La requête de la recherche par code postale est correcte  : code postale ( 26100 )
+-------------------------
+Sat, 21 April 2018, 11:54:33 - La requête de la recherche par ville est correcte  : Ville ( Lyon )
+-------------------------
+Sat, 21 April 2018, 11:54:33 - La requête de la recherche par code postale est correcte  : code postale ( 41000 )
+-------------------------
+Sat, 21 April 2018, 11:54:37 - La requête de la recherche par ville est correcte  : Ville ( Valence )
+-------------------------
+Sat, 21 April 2018, 11:54:37 - La requête de la recherche par code postale est correcte  : code postale ( 75008 )
+-------------------------
+Sat, 21 April 2018, 11:55:38 - La requête de la recherche par ville est correcte  : Ville ( Marseille )
+-------------------------
+Sat, 21 April 2018, 11:55:38 - La requête de la recherche par code postale est correcte  : code postale ( 40126 )
+-------------------------
+Sat, 21 April 2018, 11:55:38 - La requête de la recherche par liste des appareils est correcte
+-------------------------

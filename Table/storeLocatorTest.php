@@ -42,7 +42,8 @@ if($city) {
     
     $queryTestCitySl = mysqli_query($conn2, $testSl);
     $rowTestCitySl = mysqli_fetch_object($queryTestCitySl);
-    $status = ($rowTestCityEx->city >= $rowTestCitySl->city ? true : false);
+    $status = ($rowTestCityEx->city >= $rowTestCitySl->city || $rowTestCityEx->city != 0 && $rowTestCityEx->city != 0 ? true : false);
+  
     if($status) {
         $msgCity = "La requête de la recherche par ville est correcte  : Ville ( " . $city . " )";
     } else {
@@ -65,7 +66,8 @@ if($zipCode) {
         
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
-    $status = ($rowTestEx->zip >= $rowTestSl->zip ? true : false);
+    $status = ($rowTestEx->zip >= $rowTestSl->zip || $rowTestEx->zip != 0 && $rowTestEx->zip != 0 ? true : false);
+    
     if($status){
         $msgZip = "La requête de la recherche par code postale est correcte  : code postale ( " . $zipCode . " )";
     } else {
@@ -146,7 +148,9 @@ if($city) {
     $rowTestEx = mysqli_fetch_object($queryTestEx);
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
-    $status = ($rowTestEx->centre >= $rowTestSl->centre ? true : false);
+
+    $status = ($rowTestEx->centre >= $rowTestSl->centre || $rowTestEx->centre != 0 && $rowTestEx->centre != 0 ? true : false);
+   
     if($status) {
         $msgApp = "La requête de la recherche par liste des appareils est correcte";
     } else {
@@ -192,7 +196,9 @@ if($city) {
     $rowTestEx = mysqli_fetch_object($queryTestEx);
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
-    $status = ($rowTestEx->soins >= $rowTestSl->soins ? true : false);
+
+    $status = ($rowTestEx->soins >= $rowTestSl->soins || $rowTestEx->soins != 0 && $rowTestEx->soins != 0 ? true : false);
+    
     if($status) {
         $msgSoins = "La recherche Soins Visage est correcte";
     } else {
