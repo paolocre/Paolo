@@ -1,13 +1,26 @@
 <?php
 
+ini_set('display_errors', '1');
 ini_set('memory_limit','-1'); // activé la mémoire complète disponible.
 set_time_limit(500); // On augemente le time limit
 date_default_timezone_set('Europe/Paris'); // Timezone Paris
 $date = (new DateTime('NOW'))->format("D, d F Y, H:i:s");
 
+$dbhostExt = '172.16.44.1';
+$dbuserExt = 'sl_readonly';
+$dbpwdExt ='4ActlWhuyiYNfQJV';
+$dbbaseExt = 'SL_TRACKING_SEARCH';
+
+$dbhost = 'localhost';
+$dbuser = 'webserv12';
+$dbpwd = "#TvN6?aWVVTiGf";
+$dbbase = 'webserv12';
 // Créer une connexion
-$conn1 = new mysqli('localhost', "root", "", "sl_tracking_search");
-$conn2 = new mysqli('localhost', "root", "", "test");
+//$conn1 = new mysqli('172.16.44.1', "root", "ePia6cH3mb", "SL_TRACKING_SEARCH");
+$conn1 = new mysqli('172.16.44.1', "sl_readonly", "4ActlWhuyiYNfQJV", "SL_TRACKING_SEARCH");
+$conn2 = new mysqli('localhost', "webserv12", "#TvN6?aWVVTiGf", "webserv12");
+
+
 // Vérifiez la connexion
 if ($conn1->connect_errno) {
     
@@ -35,15 +48,17 @@ $city =  $citys[rand(0, count($citys) - 1)];
 $zipCode =  $zipCodes[rand(0, count($zipCodes) - 1)];
 // Si on à une ville on check la base de donnee (extranet) avec le store locator (localhost)
 if($city) {
-    $testEx = "SELECT COUNT(*) as city FROM sl_tracking_search.lpg_all_customer as s WHERE s.CITY_CUS = '$city' AND s.REF_CUS = 1";
-    $testSl = "SELECT COUNT(*) as city FROM test.lpg_all_customer as t WHERE t.CITY_CUS = '$city' AND t.REF_CUS = 1";
+    $testEx = "SELECT COUNT(*) as city FROM LPG_ALL_CUSTOMER WHERE CITY_CUS = '$city' AND REF_CUS = 1";
+    $testSl = "SELECT COUNT(*) as city FROM LPG_ALL_CUSTOMER WHERE CITY_CUS = '$city' AND REF_CUS = 1";
     $queryTestCityEx = mysqli_query($conn1, $testEx);
     $rowTestCityEx = mysqli_fetch_object($queryTestCityEx);
     
     $queryTestCitySl = mysqli_query($conn2, $testSl);
+    if(!$queryTestCitySl) {
+        die(mysqli_error($conn2));
+    }
     $rowTestCitySl = mysqli_fetch_object($queryTestCitySl);
     $status = ($rowTestCityEx->city >= $rowTestCitySl->city || $rowTestCityEx->city != 0 && $rowTestCityEx->city != 0 ? true : false);
-  
     if($status) {
         $msgCity = "La requête de la recherche par ville est correcte  : Ville ( " . $city . " )";
     } else {
@@ -59,15 +74,14 @@ if($city) {
 }
 // Si on à un code postale on check la base de donnee (extranet) avec le store locator (localhost)
 if($zipCode) {
-    $testEx = "SELECT COUNT(*) as zip FROM sl_tracking_search.lpg_all_customer as s WHERE s.ZIP_CUS = '$zipCode' AND s.REF_CUS = 1";
-    $testSl = "SELECT COUNT(*) as zip FROM test.lpg_all_customer as t WHERE t.ZIP_CUS = '$zipCode' AND t.REF_CUS = 1";
+    $testEx = "SELECT COUNT(*) as zip FROM LPG_ALL_CUSTOMER as s WHERE s.ZIP_CUS = '$zipCode' AND s.REF_CUS = 1";
+    $testSl = "SELECT COUNT(*) as zip FROM LPG_ALL_CUSTOMER as t WHERE t.ZIP_CUS = '$zipCode' AND t.REF_CUS = 1";
     $queryTestEx = mysqli_query($conn1, $testEx);
     $rowTestEx = mysqli_fetch_object($queryTestEx);
         
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
     $status = ($rowTestEx->zip >= $rowTestSl->zip || $rowTestEx->zip != 0 && $rowTestEx->zip != 0 ? true : false);
-    
     if($status){
         $msgZip = "La requête de la recherche par code postale est correcte  : code postale ( " . $zipCode . " )";
     } else {
@@ -142,15 +156,13 @@ $arraylistealliance = [
 $listeformationalliance = creerlisteappareils($arraylistealliance);
 // Si on à une ville on cherche si on à une liste des appareil et on le compare
 if($city) {
-    $testEx = "SELECT COUNT(*) as centre  FROM sl_tracking_search.lpg_all_customer as s WHERE s.CITY_CUS = '$city' AND s.REF_CUS = 1 AND " . $listeformationalliance;
-    $testSl = "SELECT COUNT(*) as centre FROM test.lpg_all_customer as t WHERE t.CITY_CUS = '$city' AND t.REF_CUS = 1 AND " . $listeformationalliance;;
+    $testEx = "SELECT COUNT(*) as centre FROM LPG_ALL_CUSTOMER as s WHERE s.CITY_CUS = '$city' AND s.REF_CUS = 1 AND " . $listeformationalliance;
+    $testSl = "SELECT COUNT(*) as centre FROM LPG_ALL_CUSTOMER as t WHERE t.CITY_CUS = '$city' AND t.REF_CUS = 1 AND " . $listeformationalliance;;
     $queryTestEx = mysqli_query($conn2, $testEx);
     $rowTestEx = mysqli_fetch_object($queryTestEx);
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
-
     $status = ($rowTestEx->centre >= $rowTestSl->centre || $rowTestEx->centre != 0 && $rowTestEx->centre != 0 ? true : false);
-   
     if($status) {
         $msgApp = "La requête de la recherche par liste des appareils est correcte";
     } else {
@@ -166,7 +178,7 @@ if($city) {
 }
 // Si on à une ville on cherche si on à une soins et on le compare
 if($city) {
-    $testEx = "SELECT COUNT(*) as soins  FROM sl_tracking_search.lpg_all_customer as s WHERE s.CITY_CUS = '$city' AND s.REF_CUS = 1 AND " . $listeformationalliance . "AND  (
+    $testEx = "SELECT COUNT(*) as soins FROM LPG_ALL_CUSTOMER as s WHERE s.CITY_CUS = '$city' AND s.REF_CUS = 1 AND " . $listeformationalliance . "AND  (
         COUNTRY_CUS = 'FR'
         AND ( ENDERMOLIFT2_CUS = 1 
             OR LISTE_FORMATIONS2_CUS LIKE '%102159700%')
@@ -179,7 +191,7 @@ if($city) {
             OR ENDERMOLAB_CUS = 1 
             OR INTEGRAL_CUS = 1) 
         )";
-        $testSl = "SELECT COUNT(*) as soins  FROM test.lpg_all_customer as t WHERE t.CITY_CUS = '$city' AND t.REF_CUS = 1 AND " . $listeformationalliance . "AND  (
+        $testSl = "SELECT COUNT(*) as soins  FROM LPG_ALL_CUSTOMER as t WHERE t.CITY_CUS = '$city' AND t.REF_CUS = 1 AND " . $listeformationalliance . "AND  (
             COUNTRY_CUS = 'FR'
             AND ( ENDERMOLIFT2_CUS = 1 
                 OR LISTE_FORMATIONS2_CUS LIKE '%102159700%')
@@ -196,9 +208,7 @@ if($city) {
     $rowTestEx = mysqli_fetch_object($queryTestEx);
     $queryTestSl = mysqli_query($conn2, $testSl);
     $rowTestSl = mysqli_fetch_object($queryTestSl);
-
     $status = ($rowTestEx->soins >= $rowTestSl->soins || $rowTestEx->soins != 0 && $rowTestEx->soins != 0 ? true : false);
-    
     if($status) {
         $msgSoins = "La recherche Soins Visage est correcte";
     } else {
@@ -215,7 +225,9 @@ if($city) {
 
 // Si stauts est TRUE on dump la bdd
 if($status) {
-    require('dumpStoreLocator.php');
+//    require('dumpStoreLocator.php');
+system(" mysqldump -u'$dbuser' -p'$dbpwd' '$dbbase' LPG_ALL_CUSTOMER LPG_ALL_FACEBOOK LPG_ALL_FACEBOOK_HORAIRES LPG_ALL_FACEBOOK_IMG >bkp/sl.sql");
+system(" mysqldump -h '$dbhostExt' -u'$dbuserExt' -p'$dbpwdExt' '$dbbaseExt' LPG_ALL_CUSTOMER LPG_ALL_FACEBOOK LPG_ALL_FACEBOOK_HORAIRES LPG_ALL_FACEBOOK_IMG | mysql -u'$dbuser' -p'$dbpwd' '$dbbase'");
 } else {
     $msgSoins = "Une error se produit avant le damping de la bdd";
     $logSoins  = $date . ' - ' .$msgSoins.PHP_EOL.
